@@ -1,0 +1,18 @@
+
+<div class="container">
+  <h3>{{hotel.name}}</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Details</a></li>
+    <li><a href="#">Rooms</a></li>
+  </ul>
+  <br>
+ <div class="row">
+   <div class="col-xs-12">
+Hotel Address: {{hotel.address.country}}, {{hotel.address.city}}, {{hotel.address.address}}
+   </div>
+   <div class="col-xs-12">
+      <img [src]="hotel.images[0].url" class="img-responsive">
+   </div>
+ </div>
+</div>
+

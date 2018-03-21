@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>HOTELS VIEW</h1>
+  <!-- {{hotelsList | json}} -->
+  <div class="hotels-list">
+  <div class="row table-header">
+    <div class="col-xs-3">Hotel Name</div>
+    <div class="col-xs-3">Image</div>
+    <div class="col-xs-2">City</div>
+    <div class="col-xs-2">Brand</div>
+    <div class="col-xs-2">Rating</div>
+  </div>
+  <div class="row hotel" *ngFor="let hotel of hotelsList" [routerLink]="['/detail', hotel.name]">
+      <div class="col-xs-3">{{hotel.name}}</div>
+      <div class="col-xs-3">
+          <img [src]="hotel.images[0].url" class="img-responsive small-img">
+      </div>
+      <div class="col-xs-2">{{hotel.address.city}}</div>
+      <div class="col-xs-2">{{hotel.details.brand.txt}}</div>
+      <div class="col-xs-2">{{hotel.details.starRating.txt}}</div>
+    </div>
+</div> 
+</div>
